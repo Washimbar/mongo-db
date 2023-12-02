@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CRUD</h1>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/M1bOoZJJjZk?si=cb4phGsaA9yDR5DZ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+    <br>
+    <a href="https://www.mongodb.com/docs/manual/crud/">Mongo db crud manual</a>
+    <h2>Database is collections of documents</h2>
+    <ul>
+        <li>Document (row / records) - field and value pair & bson formate</li>
+        <li>Collection (table)</li>
+    </ul>
+
+    <ul>
+        <li>db.collectionName.insertOne()</li>
+        <li>
+            <pre>
+            db.users.insertOne(
+                {
+                    name: 'John',
+                    age: 36,
+                    status: 'married',
+                }
+            )
+        </pre>
+        </li>
+        <li>
+            <pre>
+                {
+                    acknowledged: true,
+                    insertedId: ObjectId('656a8aeb941bc445b4e656cb')
+                }
+            </pre>
+        </li>
+        <li>db.collectionName.insertMany()</li>
+        <li>
+            <pre>
+            db.users.insertOne(
+                [
+                    {
+                        name: 'John',
+                        age: 36,
+                        status: 'married',
+                    },
+                    {
+                        name: 'Dev',
+                        age: 29,
+                        status: 'single',
+                    },
+                ]
+            )
+        </pre>
+        <li>db.collectionName.insert()</li>
+        <li>
+            <pre>
+            db.users.insertOne(
+                [
+                    {
+                        name: 'John',
+                        age: 36,
+                        status: 'married',
+                    }
+                ]
+            )
+        </pre>
+        </li>
+    </ul>
+</body>
+
+</html>
